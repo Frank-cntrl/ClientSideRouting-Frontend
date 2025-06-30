@@ -16,3 +16,4 @@ const TaskList = ({ tasks, fetchAllTasks }) => {
 };
 
 export default TaskList;
+
