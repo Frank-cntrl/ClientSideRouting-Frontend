@@ -11,7 +11,7 @@ const AddTask = ({ fetchAllTasks }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("https://client-side-routing-backend-khaki.vercel.app//api/tasks", {
+      await axios.post("https://client-side-routing-backend-khaki.vercel.app/api/tasks", {
         title,
         description,
       });
