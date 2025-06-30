@@ -6,7 +6,7 @@ import { Link } from "react-router";
 const TaskCard = ({ task, fetchAllTasks }) => {
   const handleCompleteTask = async () => {
     try {
-      await axios.patch(`http://localhost:8080/api/tasks/${task.id}`, {
+      await axios.patch(`https://client-side-routing-backend-khaki.vercel.app/${task.id}`, {
         completed: !task.completed,
       });
       fetchAllTasks();
@@ -17,7 +17,7 @@ const TaskCard = ({ task, fetchAllTasks }) => {
 
   const handleDeleteTask = async () => {
     try {
-      await axios.delete(`http://localhost:8080/api/tasks/${task.id}`);
+      await axios.delete(`https://client-side-routing-backend-khaki.vercel.app/${task.id}`);
       fetchAllTasks();
     } catch (error) {
       console.error("Error deleting task:", error);

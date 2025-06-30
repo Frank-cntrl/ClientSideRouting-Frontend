@@ -13,7 +13,7 @@ const App = () => {
 
   async function fetchAllTasks() {
     try {
-      const response = await axios.get("http://localhost:8080/api/tasks");
+      const response = await axios.get("https://client-side-routing-backend-khaki.vercel.app/api/tasks");
       setTasks(response.data);
     } catch (error) {
       console.error("Error fetching tasks:", error);
@@ -24,7 +24,7 @@ const App = () => {
 
   async function fetchAllUsers() {
     try{
-      const response = await axios.get("http://localhost:8080/api/users");
+      const response = await axios.get("https://client-side-routing-backend-khaki.vercel.app/api/users");
       setUsers(response.data);
     } catch(error){
       console.error("Error fetching Users: ", error);
